@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/MarkdownPostLayout.astro
 title: 'Mon Portfolio'
-Date: 2022-07-01
+Date: "2022-07-01"
 description: "Mon portfolio, réalisé avec Astro (React) et déployé en CI/CD sur Github"
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
