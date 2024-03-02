@@ -1,0 +1,10 @@
+---
+const allPosts = await Astro.glob("../pages/posts/footer/*.md");
+---
+<footer class="flex w-full bg-red-100">
+    {
+        allPosts.map((post) => <div class="flex w-full bg-yellow-100">
+            <div>{post.frontmatter.quote}</div>
+        </div>)
+    }
+</footer>

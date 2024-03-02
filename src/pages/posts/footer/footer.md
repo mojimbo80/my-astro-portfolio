@@ -1,0 +1,3 @@
+---
+quote: "Thinking ❤️ Designing 🧠"
+---

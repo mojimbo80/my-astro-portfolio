@@ -1,0 +1,12 @@
+---
+const allPosts = await Astro.glob("../pages/posts/header/*.md");
+---
+<header class="flex w-full bg-red-100">
+
+        {
+            allPosts.map((post) => <div class="flex">
+                <div>{post.frontmatter.firstName}</div>
+                <div>{post.frontmatter.lastName}</div>
+            </div>)
+        }
+</header>

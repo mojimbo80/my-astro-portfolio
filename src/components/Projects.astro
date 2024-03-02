@@ -1,0 +1,22 @@
+---
+const allPosts = await Astro.glob("../pages/posts/projects/*.md");
+---
+<div class="flex flex-wrap w-full bg-blue-100 px-32">
+
+        {
+            allPosts.map((post) => <div class="bg-orange-100 border border-black w-2/6">
+                <div class="border border-black m-4 bg-green-100">
+                    <a href="posts/velam">
+                        <img src={post.frontmatter.image.url} />
+                    </a>
+                    <div>{post.frontmatter.title}</div>
+                    <div>{post.frontmatter.description}</div>
+                    <div class="flex flex-wrap">
+                        {
+                            post.frontmatter.tags.map((tag) => <div class="p-2 bg-blue-400">{tag}</div>)
+                        }
+                    </div>
+                </div>
+            </div>)
+        }
+</header>

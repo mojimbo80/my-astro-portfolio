@@ -1,0 +1,16 @@
+---
+const allPosts = await Astro.glob("../pages/posts/resume/*.md");
+---
+<section class="flex flex-wrap w-full px-32">
+    {
+        allPosts.map((post) => <div class="flex flex-wrap bg-orange-100 border border-black w-full">
+            <div class="bg-orange-400 border-black w-full">
+                {post.frontmatter.welcome}
+            </div>
+            <div class="flex bg-orange-500 border-black w-full">
+                <div class="w-3/6">{post.frontmatter.past}</div>
+                <div class="w-3/6">{post.frontmatter.current}</div>
+            </div>
+        </div>)
+    }
+</section>
