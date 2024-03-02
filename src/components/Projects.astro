@@ -13,7 +13,7 @@ const allPosts = await Astro.glob("../pages/posts/projects/*.md");
                     <div>{post.frontmatter.description}</div>
                     <div class="flex flex-wrap">
                         {
-                            post.frontmatter.tags.map((tag) => <div class="p-2 bg-blue-400">{tag}</div>)
+                            post.frontmatter.tags.map((tag: any) => <div class="p-2 bg-blue-400">{tag}</div>)
                         }
                     </div>
                 </div>
