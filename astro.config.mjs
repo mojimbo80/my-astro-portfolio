@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://mojimbo80.github.io',
-  base: '/',
+  base: '/my-astro-portfolio',
 });
